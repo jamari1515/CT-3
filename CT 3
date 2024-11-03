@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int int1, int2, int3;
+
+    cout << "Enter the first integer: ";
+    cin >> int1;
+    cout << "Enter the second integer: ";
+    cin >> int2;
+    cout << "Enter the third integer: ";
+    cin >> int3;
+
+    int *ptr1 = new int(int1);  // Dynamically allocate memory and store int1
+    int *ptr2 = new int(int2);  // Dynamically allocate memory and store int2
+    int *ptr3 = new int(int3);  // Dynamically allocate memory and store int3
+
+    cout << "\nValues stored in variables:" << endl;
+    cout << "int1 = " << int1 << ", int2 = " << int2 << ", int3 = " << int3 << endl;
+
+    cout << "\nValues stored in pointers:" << endl;
+    cout << "*ptr1 = " << *ptr1 << " (address: " << ptr1 << ")" << endl;
+    cout << "*ptr2 = " << *ptr2 << " (address: " << ptr2 << ")" << endl;
+    cout << "*ptr3 = " << *ptr3 << " (address: " << ptr3 << ")" << endl;
+
+    delete ptr1;
+    delete ptr2;
+    delete ptr3;
+
+    cout << "\nMemory has been deallocated." << endl;
+
+    return 0;
+}
